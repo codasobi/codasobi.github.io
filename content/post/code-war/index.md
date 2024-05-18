@@ -21,7 +21,7 @@ Complete the solution so that it reverses the string passed into it.
 ```
 
 SOLUTION:
-If input is a string, then reverse it.
+- If input is a string, then reverse it.
 
 ```
 def solution(string):
@@ -32,7 +32,9 @@ def solution(string):
 #2 [Convert string to camel case](https://www.codewars.com/kata/517abf86da9663f1d2000003)
 
 DESCRIPTION:
-Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+- Complete the method/function so that it converts dash/underscore delimited words into camel casing. 
+- The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). 
+- The next words should be always capitalized.
 
 ```
 "the-stealth-warrior" => "theStealthWarrior"
@@ -41,9 +43,9 @@ Complete the method/function so that it converts dash/underscore delimited words
 ```
 
 SOLUTION:
-Keep first word unchanged, and capitalized the rest of the words
-Need to unify split character '-', '_'
-Split to array, capitalize then join
+- Keep first word unchanged, and capitalized the rest of the words
+- Need to unify split character '-', '_'
+- Split to array, capitalize then join
 
 ```
 def to_camel_case(text):
@@ -54,3 +56,5 @@ def to_camel_case(text):
         result = ('').join(camel_words)
     return result
 ```
+
+#3
