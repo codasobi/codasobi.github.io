@@ -65,7 +65,8 @@ DESCRIPTION:
 
 ```
 "Johnny" => "Hello, my love!"
-"Mary" => "Hello, Jenny"
+"Mary" => "Hello, Mary"
+"Oliver" => "Hello, Oliver"
 ```
 
 ```
@@ -75,3 +76,26 @@ def greet(name):
     else:
         return "Hello, {name}!".format(name=name)
 ```
+
+#4 [Changing letters](https://www.codewars.com/kata/5831c204a31721e2ae000294)
+
+DESCRIPTION:
+- When provided with a String, capitalize all vowels
+
+```
+"Hello World!" "HEllO WOrld!"
+```
+
+```
+def swap(str):
+    vowel = 'aeiou'
+    result = []
+    for char in str:
+        if char.lower() in vowel:
+            result.append(char.upper())
+        else:
+            result.append(char)
+    
+    return ''.join(result)
+```
+
