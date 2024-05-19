@@ -57,4 +57,21 @@ def to_camel_case(text):
     return result
 ```
 
-#3
+#3 [Jenny's secret message](https://www.codewars.com/kata/find-the-capitals)
+
+DESCRIPTION:
+- Jenny has written a function that returns a greeting for a user. 
+- However, she's in love with Johnny, and would like to greet him slightly different. 
+
+```
+"Johnny" => "Hello, my love!"
+"Mary" => "Hello, Jenny"
+```
+
+```
+def greet(name):
+    if name == "Johnny":
+        return "Hello, my love!"
+    else:
+        return "Hello, {name}!".format(name=name)
+```
