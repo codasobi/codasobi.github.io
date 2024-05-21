@@ -88,13 +88,20 @@ DESCRIPTION:
 ```
 
 SOLUTION:
-- define vowels
-- create an array to put char
-- use for loop to find vowel and change to upper case
-- append the char
-- change array to string
+- Define vowels
+- Create an blank [] to put char
+- Use for loop to find vowel, change to upper case then add into []
+- Change [] to string
 
 ```
+# [expression for item in iterable if condition]
+def swap(str):
+    vowel = 'aeiou'
+    result = ''.join([char.upper() if char.lower() in vowel else char for char in str])
+    return result
+
+
+# for loop
 def swap(str):
     vowel = 'aeiou'
     result = []
