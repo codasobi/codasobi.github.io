@@ -84,7 +84,7 @@ DESCRIPTION:
 
 
 ```
-"Hello World!" "HEllO WOrld!"
+"Hello World!" => "HEllO WOrld!"
 ```
 
 SOLUTION:
@@ -94,12 +94,13 @@ SOLUTION:
 - Change [] to string
 
 ```
-# [expression for item in iterable if condition]
+# [expression for item in iterable if condition] 
 def swap(str):
     vowel = 'aeiou'
     result = ''.join([char.upper() if char.lower() in vowel else char for char in str])
     return result
 
+#if before for is creating
 
 # for loop
 def swap(str):
@@ -112,4 +113,36 @@ def swap(str):
             result.append(char)
     
     return ''.join(result)
+```
+
+#5 [Disemvowel Trolls](https://www.codewars.com/kata/52fba66badcd10859f00097e)
+
+DESCRIPTION:
+- Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+```
+"This website is for losers LOL!" => "Ths wbst s fr lsrs LL!"
+```
+
+SOLUTION:
+- Define vowels
+- Use a for loop to find char other than vowels and join together
+
+```
+# for loop
+def disemvowel(string):
+    vowels = 'aeiou'
+    result = ''
+    for char in string:
+        if char.lower() not in vowels:
+            result += char
+    return result
+
+# (expression for item in iterable if condition)
+def disemvowel(string):
+    vowels = 'aeiou'
+    result = ''.join(char for char in string if char.lower() not in vowels)
+    return result
+
+#if after for is filtering
 ```
