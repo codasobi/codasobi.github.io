@@ -82,9 +82,17 @@ def greet(name):
 DESCRIPTION:
 - When provided with a String, capitalize all vowels
 
+
 ```
 "Hello World!" "HEllO WOrld!"
 ```
+
+SOLUTION:
+- define vowels
+- create an array to put char
+- use for loop to find vowel and change to upper case
+- append the char
+- change array to string
 
 ```
 def swap(str):
@@ -98,4 +106,3 @@ def swap(str):
     
     return ''.join(result)
 ```
-
