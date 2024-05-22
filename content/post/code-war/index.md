@@ -210,3 +210,31 @@ def positive_sum(arr):
             sum += num
     return sum
 ```
+
+#9 [You're a square!](https://www.codewars.com/kata/54c27a33fb7da0db0100040e)
+
+DESCRIPTION:
+- Given an integral number, determine if it's a square number:
+
+```
+-1  =>  false
+ 0  =>  true
+ 3  =>  false
+ 4  =>  true
+25  =>  true
+26  =>  false
+```
+
+SOLUTION:
+- Square number is >= 0
+- Use math.sqrt to check root
+- If result is int, then it is a square number
+
+```
+import math
+def is_square(n):
+    if n >= 0:
+        return math.sqrt(n).is_integer()
+    else:
+        return False
+```
