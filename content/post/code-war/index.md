@@ -172,3 +172,19 @@ def capital(capitals):
             sentences.append(f'The capital of {item["country"]} is {item["capital"]}')
     return sentences
 ```
+
+#7 [Even or Odd](https://www.codewars.com/kata/even-or-odd)
+
+DESCRIPTION:
+- Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+SOLUTION:
+- Use % 2 to justify even or odd
+
+```
+def even_or_odd(number):
+    if number % 2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
+```
