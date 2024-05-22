@@ -303,3 +303,32 @@ def abbrev_name(name):
     abbr = '.'.join(part[0].upper() for part in parts)
     return abbr
 ```
+
+#13 [Categorize New Member](https://www.codewars.com/kata/categorize-new-member/train/python)
+- To be a senior, a member must be at least 55 years old and have a handicap greater than 7. 
+- In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+- Input will consist of a list of pairs. 
+- Each pair contains information for a single potential member. 
+- Information consists of an integer for the person's "age" and an integer for the person's "handicap".
+- Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+```
+input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+```
+
+SOLUTION:
+- Create a []
+- Use a for loop, if match senior's condition then append 'Senior'
+- Other append 'Open'
+
+```
+def open_or_senior(data):
+    result = []
+    for item in data:
+        if item[0] >= 55 and item[1] > 7:
+            result.append('Senior')
+        else:
+            result.append('Open')
+    return result
+```
