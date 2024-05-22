@@ -281,3 +281,25 @@ def find_average(numbers):
     else:
         return sum(numbers) / len(numbers)
 ```
+
+#12 [Abbreviate a Two Word Name](https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3)
+
+DESCRIPTION:
+- Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+- The output should be two capital letters with a dot separating them.
+
+```
+Sam Harris => S.H
+patrick feeney => P.F
+```
+
+SOLUTION:
+- split name to []
+- upper first char and join with '.'
+
+```
+def abbrev_name(name):
+    parts = name.split(' ')
+    abbr = '.'.join(part[0].upper() for part in parts)
+    return abbr
+```
