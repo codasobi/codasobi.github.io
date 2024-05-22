@@ -238,3 +238,28 @@ def is_square(n):
     else:
         return False
 ```
+
+#10 [Keep Hydrated](https://www.codewars.com/kata/582cb0224e56e068d800003c)
+
+DESCRIPTION:
+- Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+- You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+```
+time(hr) = 3 => litres = 1
+time(hr) = 6.7 => litres = 3
+time(hr) = 11.8 => litres = 5
+```
+
+SOLUTION:
+- 3 * 0.5 = 1.5 => 1
+- 6.7 * 0.5 = 3.35 => 3
+- 11.8 * 0.5 = 5.9 => 5
+- Use math.floor()
+
+```
+import math
+def litres(time):
+    # 1 hour need 0.5 liter
+    return math.floor(time * 0.5)
+```
