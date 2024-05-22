@@ -263,3 +263,21 @@ def litres(time):
     # 1 hour need 0.5 liter
     return math.floor(time * 0.5)
 ```
+
+#11 [Calculate Average](https://www.codewars.com/kata/calculate-average)
+
+DESCRIPTION:
+- Write a function which calculates the average of the numbers in a given list.
+- Empty arrays should return 0.
+
+SOLUTION:
+- empty array, lens(number) will be 0 (ZeroDivisionError: division by zero)
+- use sum() and lens()
+
+```
+def find_average(numbers):
+    if len(numbers) == 0:
+        return 0
+    else:
+        return sum(numbers) / len(numbers)
+```
