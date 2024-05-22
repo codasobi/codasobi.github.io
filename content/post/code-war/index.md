@@ -188,3 +188,25 @@ def even_or_odd(number):
     else:
         return 'Odd'
 ```
+
+#8 [Sum of positive](https://www.codewars.com/kata/5715eaedb436cf5606000381)
+
+DESCRIPTION:
+- You get an array of numbers, return the sum of all of the positives ones.
+
+```
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+```
+
+SOLUTION:
+- Create a sum var
+- Use a for loop, if num is positive then add it.
+
+```
+def positive_sum(arr):
+    sum = 0
+    for num in arr:
+        if num > 0:
+            sum += num
+    return sum
+```
