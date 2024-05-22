@@ -332,3 +332,23 @@ def open_or_senior(data):
             result.append('Open')
     return result
 ```
+
+#14 [Find the smallest integer in the array](https://www.codewars.com/kata/find-the-smallest-integer-in-the-array)
+
+DESCRIPTION:
+- Given an array of integers your solution should find the smallest integer.
+
+```
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+```
+
+SOLUTION:
+- Use min() to find the int 
+
+```
+def find_smallest_int(arr):
+    return min(arr)
+```
+
+
