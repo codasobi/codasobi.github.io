@@ -351,4 +351,39 @@ def find_smallest_int(arr):
     return min(arr)
 ```
 
+#15 [Counting Duplicates](https://www.codewars.com/kata/counting-duplicates)
 
+DESCRIPTION:
+- Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. 
+- The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+```
+"abcde" => 0 # no characters repeats more than once
+"aabbcde" => 2 # 'a' and 'b'
+"aabBcde" => 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+"indivisibility" => 1 # 'i' occurs six times
+"Indivisibilities" => 2 # 'i' occurs seven times and 's' occurs twice
+"aA11" => 2 # 'a' and '1'
+"ABBA" => 2 # 'A' and 'B' each occur twice
+```
+
+SOLUTION:
+- Create a {} to count chars
+- Count if key's value > 1
+
+```
+def duplicate_count(text):
+    counter = {}
+    for char in text.lower():
+        if char in counter:
+            counter[char] += 1
+        else:
+            counter[char] = 1
+    
+    count = 0
+    for item in counter.values():
+        if item > 1:
+            count += 1
+#     count = sum(1 for item in counter.values() if item > 1 )
+    return count
+```
