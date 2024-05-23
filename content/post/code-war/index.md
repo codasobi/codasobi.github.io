@@ -387,3 +387,34 @@ def duplicate_count(text):
 #     count = sum(1 for item in counter.values() if item > 1 )
     return count
 ```
+
+#16 Counting Sheep (https://www.codewars.com/kata/54edbc7200b811e956000556)
+
+DESCRIPTION:
+- Consider an array/list of sheep where some sheep may be missing from their place. 
+- We need a function that counts the number of sheep present in the array (true means present).
+- Hint: Don't forget to check for bad values like null/undefined
+
+```
+[True,  True,  True,  False,
+  True,  True,  True,  True ,
+  True,  False, True,  False,
+  True,  False, False, True ,
+  True,  True,  True,  True ,
+  False, False, True,  True] => 17
+```
+
+SOLUTION:
+- Use a for loop, if True, count + 1
+
+```
+def count_sheeps(sheep):
+    count = 0
+    for status in sheep:
+        if status:
+            count += 1
+        else:
+            continue
+#     count = sum(1 for status in sheep if status)
+    return count
+```
