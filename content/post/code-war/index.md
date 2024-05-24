@@ -476,3 +476,25 @@ SOLUTION:
 def array_diff(a, b):
     return [item for item in a if item not in b]
 ```
+
+#20 [Century From Year](https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/)
+
+DESCRIPTION:
+- Given a year, return the century it is in.
+
+```
+1705 --> 18
+1900 --> 19
+1601 --> 17
+2000 --> 20
+2742 --> 28
+```
+
+SOLUTION:
+- if the num could not be devided by 100, then will round up
+
+```
+import math
+def century(year):
+    return math.ceil(year / 100)
+```
