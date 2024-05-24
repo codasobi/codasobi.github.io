@@ -459,3 +459,20 @@ SOLUTION:
 def difference_in_ages(ages):
     return (min(ages), max(ages), max(ages) - min(ages))
 ```
+
+#19 [Array diff](https://www.codewars.com/kata/array-dot-diff)
+
+DESCRIPTION:
+- Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+- It should remove all values from list a, which are present in list b keeping their order.
+
+```
+array_diff([1,2],[1]) == [2]
+array_diff([1,2,2,2,3],[2]) == [1,3]
+```
+
+SOLUTION:
+```
+def array_diff(a, b):
+    return [item for item in a if item not in b]
+```
