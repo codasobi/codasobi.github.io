@@ -129,6 +129,13 @@ SOLUTION:
 - Use a for loop to find char other than vowels and join together
 
 ```
+# maketrans
+def disemvowel(string):
+    vowel = 'aeiou'
+    table = str.maketrans('', '', vowel)
+    return string.lower().translate(table)
+
+
 # for loop
 def disemvowel(string):
     vowels = 'aeiou'
