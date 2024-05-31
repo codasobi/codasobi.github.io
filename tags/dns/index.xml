@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dns on Play with code | codasobi</title><link>https://codasobi.github.com/tags/dns/</link><description>Recent content in Dns on Play with code | codasobi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 08 May 2024 20:00:00 +0000</lastBuildDate><atom:link href="https://codasobi.github.com/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>域名解析（DNS Lookup） 的簡介</title><link>https://codasobi.github.com/p/dns-lookup/</link><pubDate>Wed, 08 May 2024 20:00:00 +0000</pubDate><guid>https://codasobi.github.com/p/dns-lookup/</guid><description>&lt;h2 id="為什麼需要域名解析">為什麼需要域名解析？
+&lt;/h2>&lt;p>每個連上網際網路的裝置都有一個唯一的 IP 地址，這是一串數字，用來識別和連接網路上的裝置。對於一般使用者來說，記住 IP 地址可能非常困難。域名解析的目的是讓我們可以使用簡單易記的名稱（域名）來訪問網站，而不用記住一連串的數字。&lt;/p>
+&lt;h2 id="域名解析的運作方式">域名解析的運作方式
+&lt;/h2>&lt;p>域名解析主要依靠域名系統（DNS），這是一個分散式的系統，用來管理域名與 IP 地址之間的對應關係。以下是域名解析的主要步驟：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>DNS 解析器：當你在瀏覽器中輸入域名時，DNS 解析器會開始工作。它負責查詢並找到對應的 IP 地址。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>尋找根域名伺服器：DNS 解析器會先詢問根域名伺服器，根域名伺服器是 DNS 系統的最上層節點，它可以指引查詢下一步該去哪個伺服器。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>尋找頂級域名 (TLD) 伺服器：根域名伺服器會把請求轉發到負責特定頂級域名（例如 &amp;ldquo;.com&amp;rdquo; 或 &amp;ldquo;.org&amp;rdquo;）的伺服器。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>尋找權威 DNS 伺服器：頂級域名伺服器再將請求轉給該域名的權威 DNS 伺服器，這些伺服器包含了該域名對應的 IP 地址。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>返回 IP 地址：權威 DNS 伺服器提供對應的 IP 地址，並將其傳回 DNS 解析器，再由解析器傳給瀏覽器或其他應用程式。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>連接到目標伺服器：當瀏覽器得到 IP 地址後，它可以連接到目標伺服器，並開始請求網頁內容或其他服務。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="不同類型的域名解析">不同類型的域名解析
+&lt;/h2>&lt;p>域名解析有不同的類型，主要依據查詢的方式和目的來分類。常見的幾種類型包括：&lt;/p>
+&lt;ul>
+&lt;li>正向解析：將域名轉換成 IP 地址。&lt;/li>
+&lt;li>反向解析：將 IP 地址轉換成域名，通常用於網路排錯或其他技術應用。&lt;/li>
+&lt;li>遞歸查詢：由 DNS 解析器負責完整的查詢過程，從根伺服器到權威伺服器。&lt;/li>
+&lt;li>迭代查詢：每個伺服器只返回下一個查詢的方向，而不提供最終答案。&lt;/li>
+&lt;/ul>
+&lt;h2 id="結論">結論
+&lt;/h2>&lt;p>域名解析是網際網路中不可或缺的過程，它讓我們可以使用易記的域名來訪問網站，而不用記住複雜的 IP 地址。DNS 透過一系列的查詢步驟，將域名與相應的 IP 地址對應起來，讓網際網路的運作更為順暢且方便。&lt;/p></description></item></channel></rss>

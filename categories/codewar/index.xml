@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codewar on Play with code | codasobi</title><link>https://codasobi.github.com/categories/codewar/</link><description>Recent content in Codewar on Play with code | codasobi</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 17 May 2024 07:00:00 +0000</lastBuildDate><atom:link href="https://codasobi.github.com/categories/codewar/index.xml" rel="self" type="application/rss+xml"/><item><title>Codewars practice</title><link>https://codasobi.github.com/p/codewar/</link><pubDate>Fri, 17 May 2024 07:00:00 +0000</pubDate><guid>https://codasobi.github.com/p/codewar/</guid><description>&lt;p>#1 &lt;a class="link" href="https://www.codewars.com/kata/5168bb5dfe9a00b126000018" target="_blank" rel="noopener"
+>Reversed Strings&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:
+Complete the solution so that it reverses the string passed into it.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#39;world&amp;#39; =&amp;gt; &amp;#39;dlrow&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#39;word&amp;#39; =&amp;gt; &amp;#39;drow&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>If input is a string, then reverse it.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def solution(string):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if isinstance(string, str):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return string[::-1]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#2 &lt;a class="link" href="https://www.codewars.com/kata/517abf86da9663f1d2000003" target="_blank" rel="noopener"
+>Convert string to camel case&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Complete the method/function so that it converts dash/underscore delimited words into camel casing.&lt;/li>
+&lt;li>The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).&lt;/li>
+&lt;li>The next words should be always capitalized.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;the-stealth-warrior&amp;#34; =&amp;gt; &amp;#34;theStealthWarrior&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;The_Stealth_Warrior&amp;#34; =&amp;gt; &amp;#34;TheStealthWarrior&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;The_Stealth-Warrior&amp;#34; =&amp;gt; &amp;#34;TheStealthWarrior&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Keep first word unchanged, and capitalized the rest of the words&lt;/li>
+&lt;li>Need to unify split character &amp;lsquo;-&amp;rsquo;, &amp;lsquo;_&amp;rsquo;&lt;/li>
+&lt;li>Split to array, capitalize then join&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def to_camel_case(text):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if isinstance(text, str):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # unify &amp;#39;-&amp;#39; to &amp;#39;_&amp;#39; and split
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> words = text.replace(&amp;#39;-&amp;#39;, &amp;#39;_&amp;#39;).split(&amp;#39;_&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> camel_words = [words[0]] + [word.capitalize() for word in words[1:]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = (&amp;#39;&amp;#39;).join(camel_words)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return result
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#3 &lt;a class="link" href="https://www.codewars.com/kata/find-the-capitals" target="_blank" rel="noopener"
+>Jenny&amp;rsquo;s secret message&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Jenny has written a function that returns a greeting for a user.&lt;/li>
+&lt;li>However, she&amp;rsquo;s in love with Johnny, and would like to greet him slightly different.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;Johnny&amp;#34; =&amp;gt; &amp;#34;Hello, my love!&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;Mary&amp;#34; =&amp;gt; &amp;#34;Hello, Mary&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;Oliver&amp;#34; =&amp;gt; &amp;#34;Hello, Oliver&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def greet(name):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if name == &amp;#34;Johnny&amp;#34;:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;Hello, my love!&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;Hello, {name}!&amp;#34;.format(name=name)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#4 &lt;a class="link" href="https://www.codewars.com/kata/5831c204a31721e2ae000294" target="_blank" rel="noopener"
+>Changing letters&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>When provided with a String, capitalize all vowels&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;Hello World!&amp;#34; =&amp;gt; &amp;#34;HEllO WOrld!&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Define vowels&lt;/li>
+&lt;li>Create an blank [] to put char&lt;/li>
+&lt;li>Use for loop to find vowel, change to upper case then add into []&lt;/li>
+&lt;li>Change [] to string&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># [expression for item in iterable if condition]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def swap(str):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vowel = &amp;#39;aeiou&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = &amp;#39;&amp;#39;.join([char.upper() if char.lower() in vowel else char for char in str])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return result
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#if before for is creating
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># for loop
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def swap(str):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vowel = &amp;#39;aeiou&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for char in str:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if char.lower() in vowel:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result.append(char.upper())
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result.append(char)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#39;&amp;#39;.join(result)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#5 &lt;a class="link" href="https://www.codewars.com/kata/52fba66badcd10859f00097e" target="_blank" rel="noopener"
+>Disemvowel Trolls&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Your task is to write a function that takes a string and return a new string with all vowels removed.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;This website is for losers LOL!&amp;#34; =&amp;gt; &amp;#34;Ths wbst s fr lsrs LL!&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Define vowels&lt;/li>
+&lt;li>Use a for loop to find char other than vowels and join together&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># maketrans
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def disemvowel(string):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vowel = &amp;#39;aeiou&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> table = str.maketrans(&amp;#39;&amp;#39;, &amp;#39;&amp;#39;, vowel)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return string.lower().translate(table)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># for loop
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def disemvowel(string):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vowels = &amp;#39;aeiou&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = &amp;#39;&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for char in string:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if char.lower() not in vowels:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result += char
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return result
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># (expression for item in iterable if condition)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def disemvowel(string):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vowels = &amp;#39;aeiou&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = &amp;#39;&amp;#39;.join(char for char in string if char.lower() not in vowels)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return result
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#if after for is filtering
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#6 &lt;a class="link" href="https://www.codewars.com/kata/53573877d5493b4d6e00050c" target="_blank" rel="noopener"
+>Find the Capitals&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Complete the method that takes a sequence of objects with two keys each: country or state, and capital. Keys may be symbols or strings.&lt;/li>
+&lt;li>The method should return an array of sentences declaring the state or country and its capital.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[{&amp;#39;state&amp;#39;: &amp;#39;Maine&amp;#39;, &amp;#39;capital&amp;#39;: &amp;#39;Augusta&amp;#39;}] =&amp;gt; [&amp;#34;The capital of Maine is Augusta&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[{&amp;#39;country&amp;#39; : &amp;#39;Spain&amp;#39;, &amp;#39;capital&amp;#39; : &amp;#39;Madrid&amp;#39;}] =&amp;gt; [&amp;#34;The capital of Spain is Madrid&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[{&amp;#34;state&amp;#34; : &amp;#39;Maine&amp;#39;, &amp;#39;capital&amp;#39;: &amp;#39;Augusta&amp;#39;}, {&amp;#39;country&amp;#39;: &amp;#39;Spain&amp;#39;, &amp;#34;capital&amp;#34; : &amp;#34;Madrid&amp;#34;}] =&amp;gt; [&amp;#34;The capital of Maine is Augusta&amp;#34;, &amp;#34;The capital of Spain is Madrid&amp;#34;]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Create a [] to put in the sentence&lt;/li>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def capital(capitals):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sentences = []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for item in capitals:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if &amp;#39;state&amp;#39; in item:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sentences.append(f&amp;#39;The capital of {item[&amp;#34;state&amp;#34;]} is {item[&amp;#34;capital&amp;#34;]}&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> elif &amp;#39;country&amp;#39; in item:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sentences.append(f&amp;#39;The capital of {item[&amp;#34;country&amp;#34;]} is {item[&amp;#34;capital&amp;#34;]}&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return sentences
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#7 &lt;a class="link" href="https://www.codewars.com/kata/even-or-odd" target="_blank" rel="noopener"
+>Even or Odd&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Create a function that takes an integer as an argument and returns &amp;ldquo;Even&amp;rdquo; for even numbers or &amp;ldquo;Odd&amp;rdquo; for odd numbers.&lt;/li>
+&lt;/ul>
+&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Use % 2 to justify even or odd&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def even_or_odd(number):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if number % 2 == 0:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#39;Even&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#39;Odd&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#8 &lt;a class="link" href="https://www.codewars.com/kata/5715eaedb436cf5606000381" target="_blank" rel="noopener"
+>Sum of positive&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>You get an array of numbers, return the sum of all of the positives ones.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Example [1,-4,7,12] =&amp;gt; 1 + 7 + 12 = 20
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Create a sum var&lt;/li>
+&lt;li>Use a for loop, if num is positive then add it.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def positive_sum(arr):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sum = 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for num in arr:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if num &amp;gt; 0:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sum += num
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return sum
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#9 &lt;a class="link" href="https://www.codewars.com/kata/54c27a33fb7da0db0100040e" target="_blank" rel="noopener"
+>You&amp;rsquo;re a square!&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Given an integral number, determine if it&amp;rsquo;s a square number:&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">-1 =&amp;gt; false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 0 =&amp;gt; true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 3 =&amp;gt; false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 4 =&amp;gt; true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">25 =&amp;gt; true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">26 =&amp;gt; false
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Square number is &amp;gt;= 0&lt;/li>
+&lt;li>Use math.sqrt to check root&lt;/li>
+&lt;li>If result is int, then it is a square number&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import math
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def is_square(n):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if n &amp;gt;= 0:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return math.sqrt(n).is_integer()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return False
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#10 &lt;a class="link" href="https://www.codewars.com/kata/582cb0224e56e068d800003c" target="_blank" rel="noopener"
+>Keep Hydrated&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.&lt;/li>
+&lt;li>You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">time(hr) = 3 =&amp;gt; litres = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">time(hr) = 6.7 =&amp;gt; litres = 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">time(hr) = 11.8 =&amp;gt; litres = 5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>3 * 0.5 = 1.5 =&amp;gt; 1&lt;/li>
+&lt;li>6.7 * 0.5 = 3.35 =&amp;gt; 3&lt;/li>
+&lt;li>11.8 * 0.5 = 5.9 =&amp;gt; 5&lt;/li>
+&lt;li>Use math.floor()&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import math
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def litres(time):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 1 hour need 0.5 liter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return math.floor(time * 0.5)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#11 &lt;a class="link" href="https://www.codewars.com/kata/calculate-average" target="_blank" rel="noopener"
+>Calculate Average&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Write a function which calculates the average of the numbers in a given list.&lt;/li>
+&lt;li>Empty arrays should return 0.&lt;/li>
+&lt;/ul>
+&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>empty array, lens(number) will be 0 (ZeroDivisionError: division by zero)&lt;/li>
+&lt;li>use sum() and lens()&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def find_average(numbers):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if len(numbers) == 0:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return sum(numbers) / len(numbers)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#12 &lt;a class="link" href="https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3" target="_blank" rel="noopener"
+>Abbreviate a Two Word Name&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.&lt;/li>
+&lt;li>The output should be two capital letters with a dot separating them.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Sam Harris =&amp;gt; S.H
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">patrick feeney =&amp;gt; P.F
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>split name to []&lt;/li>
+&lt;li>upper first char and join with &amp;lsquo;.&amp;rsquo;&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def abbrev_name(name):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parts = name.split(&amp;#39; &amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abbr = &amp;#39;.&amp;#39;.join(part[0].upper() for part in parts)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return abbr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#13 &lt;a class="link" href="https://www.codewars.com/kata/categorize-new-member/train/python" target="_blank" rel="noopener"
+>Categorize New Member&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>To be a senior, a member must be at least 55 years old and have a handicap greater than 7.&lt;/li>
+&lt;li>In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.&lt;/li>
+&lt;li>Input will consist of a list of pairs.&lt;/li>
+&lt;li>Each pair contains information for a single potential member.&lt;/li>
+&lt;li>Information consists of an integer for the person&amp;rsquo;s &amp;ldquo;age&amp;rdquo; and an integer for the person&amp;rsquo;s &amp;ldquo;handicap&amp;rdquo;.&lt;/li>
+&lt;li>Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">input = [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">output = [&amp;#34;Open&amp;#34;, &amp;#34;Open&amp;#34;, &amp;#34;Senior&amp;#34;, &amp;#34;Open&amp;#34;, &amp;#34;Open&amp;#34;, &amp;#34;Senior&amp;#34;]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Create a []&lt;/li>
+&lt;li>Use a for loop, if match senior&amp;rsquo;s condition then append &amp;lsquo;Senior&amp;rsquo;&lt;/li>
+&lt;li>Other append &amp;lsquo;Open&amp;rsquo;&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def open_or_senior(data):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result = []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for item in data:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if item[0] &amp;gt;= 55 and item[1] &amp;gt; 7:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result.append(&amp;#39;Senior&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> result.append(&amp;#39;Open&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return result
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#14 &lt;a class="link" href="https://www.codewars.com/kata/find-the-smallest-integer-in-the-array" target="_blank" rel="noopener"
+>Find the smallest integer in the array&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Given an array of integers your solution should find the smallest integer.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Given [34, 15, 88, 2] your solution will return 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Given [34, -345, -1, 100] your solution will return -345
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Use min() to find the int&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def find_smallest_int(arr):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return min(arr)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#15 &lt;a class="link" href="https://www.codewars.com/kata/counting-duplicates" target="_blank" rel="noopener"
+>Counting Duplicates&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string.&lt;/li>
+&lt;li>The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-mysql" data-lang="mysql">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;abcde&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># no characters repeats more than once
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;aabbcde&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;a&amp;#39; and &amp;#39;b&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;aabBcde&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;a&amp;#39; occurs twice and &amp;#39;b&amp;#39; twice (`b` and `B`)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;indivisibility&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;i&amp;#39; occurs six times
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;Indivisibilities&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;i&amp;#39; occurs seven times and &amp;#39;s&amp;#39; occurs twice
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;aA11&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;a&amp;#39; and &amp;#39;1&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="s2">&amp;#34;ABBA&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c1"># &amp;#39;A&amp;#39; and &amp;#39;B&amp;#39; each occur twice
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Create a {} to count chars&lt;/li>
+&lt;li>Count if key&amp;rsquo;s value &amp;gt; 1&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def duplicate_count(text):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> counter = {}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for char in text.lower():
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if char in counter:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> counter[char] += 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> counter[char] = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> count = 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for item in counter.values():
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if item &amp;gt; 1:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> count += 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># count = sum(1 for item in counter.values() if item &amp;gt; 1 )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return count
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#16 Counting Sheep (&lt;a class="link" href="https://www.codewars.com/kata/54edbc7200b811e956000556" target="_blank" rel="noopener"
+>https://www.codewars.com/kata/54edbc7200b811e956000556&lt;/a>)&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Consider an array/list of sheep where some sheep may be missing from their place.&lt;/li>
+&lt;li>We need a function that counts the number of sheep present in the array (true means present).&lt;/li>
+&lt;li>Hint: Don&amp;rsquo;t forget to check for bad values like null/undefined&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[True, True, True, False,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> True, True, True, True ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> True, False, True, False,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> True, False, False, True ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> True, True, True, True ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> False, False, True, True] =&amp;gt; 17
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Use a for loop, if True, count + 1&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def count_sheeps(sheep):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> count = 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> for status in sheep:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if status:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> count += 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> continue
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># count = sum(1 for status in sheep if status)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return count
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#17 &lt;a class="link" href="https://www.codewars.com/kata/unique-in-order" target="_blank" rel="noopener"
+>Unique In Order&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">unique_in_order(&amp;#39;AAAABBBCCDAABBB&amp;#39;) =&amp;gt; [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;D&amp;#39;, &amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">unique_in_order(&amp;#39;ABBCcAD&amp;#39;) =&amp;gt; [&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;, &amp;#39;C&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;A&amp;#39;, &amp;#39;D&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">unique_in_order([1, 2, 2, 3, 3]) =&amp;gt; [1, 2, 3]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">unique_in_order((1, 2, 2, 3, 3)) =&amp;gt; [1, 2, 3]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Use groupby to group, and return the keys&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-gdscript3" data-lang="gdscript3">&lt;span class="line">&lt;span class="cl">&lt;span class="n">from&lt;/span> &lt;span class="n">itertools&lt;/span> &lt;span class="n">import&lt;/span> &lt;span class="n">groupby&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">unique_in_order&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sequence&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">key&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">key&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">group&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">groupby&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sequence&lt;/span>&lt;span class="p">)]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#18 &lt;a class="link" href="https://www.codewars.com/kata/5720a1cb65a504fdff0003e2" target="_blank" rel="noopener"
+>Find the Difference in Age&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.&lt;/li>
+&lt;li>You will be given an array of all the family members&amp;rsquo; ages, in any order.&lt;/li>
+&lt;li>The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0.&lt;/li>
+&lt;li>Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[16, 22, 31, 44, 3, 38, 27, 41, 88] =&amp;gt; (3, 88, 85))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Use max() and min() to calculate and return a tuple&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def difference_in_ages(ages):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return (min(ages), max(ages), max(ages) - min(ages))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#19 &lt;a class="link" href="https://www.codewars.com/kata/array-dot-diff" target="_blank" rel="noopener"
+>Array diff&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.&lt;/li>
+&lt;li>It should remove all values from list a, which are present in list b keeping their order.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">array_diff([1,2],[1]) == [2]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">array_diff([1,2,2,2,3],[2]) == [1,3]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def array_diff(a, b):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return [item for item in a if item not in b]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#20 &lt;a class="link" href="https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/" target="_blank" rel="noopener"
+>Century From Year&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Given a year, return the century it is in.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1705 --&amp;gt; 18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1900 --&amp;gt; 19
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1601 --&amp;gt; 17
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2000 --&amp;gt; 20
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2742 --&amp;gt; 28
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>if the num could not be devided by 100, then will round up&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">import math
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def century(year):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return math.ceil(year / 100)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#21 &lt;a class="link" href="https://www.codewars.com/kata/54ba84be607a92aa900000f1/train/python" target="_blank" rel="noopener"
+>Isograms&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>An isogram is a word that has no repeating letters, consecutive or non-consecutive.&lt;/li>
+&lt;li>Implement a function that determines whether a string that contains only letters is an isogram.&lt;/li>
+&lt;li>Assume the empty string is an isogram.&lt;/li>
+&lt;li>Ignore letter case.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;Dermatoglyphics&amp;#34; =&amp;gt; true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;aba&amp;#34; =&amp;gt; false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;moOse&amp;#34; =&amp;gt; false (ignore letter case)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Change all char to lower case.&lt;/li>
+&lt;li>Compare string length with set(string) length&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def is_isogram(string):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> string = string.lower()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if len(string) == len(set(string)):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return True
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return False
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>#22 &lt;a class="link" href="https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/python" target="_blank" rel="noopener"
+>Two to One&lt;/a>&lt;/p>
+&lt;p>DESCRIPTION:&lt;/p>
+&lt;ul>
+&lt;li>Take 2 strings s1 and s2 including only letters from a to z.&lt;/li>
+&lt;li>Return a new sorted string, the longest possible, containing distinct letters&lt;/li>
+&lt;li>each taken only once&lt;/li>
+&lt;li>coming from s1 or s2.&lt;/li>
+&lt;/ul>
+&lt;p>SOLUTION:&lt;/p>
+&lt;ul>
+&lt;li>Combine 2 string&lt;/li>
+&lt;li>Use set to remove the repeated&lt;/li>
+&lt;li>Sort the set and return a string&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">def longest(s1, s2):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#39;&amp;#39;.join(sorted(set(s1+s2)))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
