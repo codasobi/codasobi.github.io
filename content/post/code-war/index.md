@@ -532,3 +532,21 @@ def is_isogram(string):
     else:
         return False
 ```
+
+#22 [Two to One](https://www.codewars.com/kata/5656b6906de340bd1b0000ac/train/python)
+
+DESCRIPTION:
+- Take 2 strings s1 and s2 including only letters from a to z. 
+- Return a new sorted string, the longest possible, containing distinct letters
+- each taken only once 
+- coming from s1 or s2.
+
+SOLUTION:
+- Combine 2 string
+- Use set to remove the repeated
+- Sort the set and return a string
+
+```
+def longest(s1, s2):
+    return ''.join(sorted(set(s1+s2)))
+```
